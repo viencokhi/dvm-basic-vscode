@@ -1,0 +1,66 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "DVM-BASIC",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.dvm-basic",
+				"match": "\\b(as|dim|LET|IF|THEN|ELSE|GOTO|RETURN|Function|End Function)\\b"
+			},
+			{
+				"name": "keyword.operator.logical.dvm-basic",
+				"match": "\\b(AND|NOT|OR)\b"
+			},
+			{
+				"name": "entity.name.type.dvm-basic",
+				"match": "\\b(Uint64|String)\\b"
+			},
+			{
+				"name": "variable.name.dvm-basic",
+				"match": "\\b[A-Za-z_](\\$|[A-Za-z0-9_]*)"
+			},
+			{
+				"name": "constant.numeric.dvm-basic",
+				"match": "-?\\b((([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)(L|l|UL|ul|u|U|F|f)?|(\\$[a-zA-Z0-9]+)|(@[0|1]+)\\b"
+			},
+			{
+				"match": "&|\\*|\\-|\\+|=|<>|<|>|\\|\\^|<<|>>|~",
+				"name": "keyword.operator.arithmetic.dvm-basic"
+			},
+			{
+				"name": "comment.line.dvm-basic",
+				"match": "(?i:(\\/\\/|').*)"
+			},
+			{
+				"name": "comment.block.dvm-basic",
+				"begin": "/\\*",
+				"end": "\\*/"
+			},
+			{
+				"name": "support.function.dvm-basic",
+				"match": "(?i:\\b(LOAD|EXISTS|STORE|RANDOM|SCID|BLID|TXID|BLOCK_HEIGHT|BLOCK_TOPOHEIGHT|SIGNER|IS_ADDRESS_VALID|ADDRESS_RAW|SEND_DERO_TO_ADDRESS)\\b)"
+			}
+		]
+		},
+		"strings": {
+			"name": "string.quoted.double.dvm-basic",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.dvm-basic",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.dvm-basic"
+}

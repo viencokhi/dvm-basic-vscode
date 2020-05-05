@@ -1,0 +1,25 @@
+{
+    "name": "dvm-basic",
+    "displayName": "DVM-BASIC",
+    "description": "DVM-BASIC Dero Blockchain",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.44.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "dvm-basic",
+            "aliases": ["DVM-BASIC", "dvm-basic"],
+            "extensions": [".dbas",".bas"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "dvm-basic",
+            "scopeName": "source.dvm-basic",
+            "path": "./syntaxes/dvm-basic.tmLanguage.json"
+        }]
+    }
+}
