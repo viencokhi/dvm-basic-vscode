@@ -3,6 +3,7 @@
     "displayName": "DVM-BASIC",
     "description": "DVM-BASIC Dero Blockchain",
     "version": "0.0.1",
+    "repository": "https://github.com/onepad/dvm-basic-vscode",
     "engines": {
         "vscode": "^1.44.0"
     },
@@ -21,5 +22,6 @@
             "scopeName": "source.dvm-basic",
             "path": "./syntaxes/dvm-basic.tmLanguage.json"
         }]
-    }
+    },
+    "publisher": "onepad"
 }
